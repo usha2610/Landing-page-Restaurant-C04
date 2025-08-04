@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodFiesta - Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: transparent;
+    }
+
+    header {
+      background: #ff5722;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    section {
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .menu-item {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.02);
+    }
+
+    .menu-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .menu-item-content {
+      padding: 15px;
+    }
+
+    .menu-item-content h3 {
+      margin: 10px 0 5px;
+    }
+
+    .price {
+      color: #444;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .menu-item-content label {
+      display: block;
+      margin-top: 5px;
+      color: #555;
+    }
+
+    .order-btn {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 1em;
+      background: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .order-btn:hover {
+      background: #e64a19;
+    }
+
+    .footer {
+      background-color: #222;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .social-icons {
+      margin-bottom: 10px;
+    }
+
+    .social-icons a {
+      color: #ff5722;
+      font-size: 20px;
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #ffd699;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>FoodFiesta Menu</header>
+
+  <section>
+    <h2>Biryani Specials</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://c.ndtvimg.com/2019-06/klu23v08_biryani_625x300_06_June_19.jpg" alt="Hyderabadi Biryani">
+        <div class="menu-item-content">
+          <h3>Hyderabadi Biryani</h3>
+          <p class="price">₹150 / ₹200 / ₹250</p>
+          <label><input type="checkbox" name="menu" value="Hyderabadi Biryani" data-price="150,200,250"> Select</label>
+          <label><input type="radio" name="Hyderabadi Biryani" value="0" checked> Small</label>
+          <label><input type="radio" name="Hyderabadi Biryani" value="1"> Medium</label>
+          <label><input type="radio" name="Hyderabadi Biryani" value="2"> Large</label>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://j6e2i8c9.delivery.rocketcdn.me/wp-content/uploads/2019/01/Shahi-Veg-Biryani-Recipe-01.jpg" alt="Veg Biryani">
+        <div class="menu-item-content">
+          <h3>Veg Biryani</h3>
+          <p class="price">₹120 / ₹170 / ₹220</p>
+          <label><input type="checkbox" name="menu" value="Veg Biryani" data-price="120,170,220"> Select</label>
+          <label><input type="radio" name="Veg Biryani" value="0" checked> Small</label>
+          <label><input type="radio" name="Veg Biryani" value="1"> Medium</label>
+          <label><input type="radio" name="Veg Biryani" value="2"> Large</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Starters</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://www.cookforindia.com/wp-content/uploads/2016/08/Paneer-Tikka-_LR-1140x500.jpg" alt="Paneer Tikka">
+        <div class="menu-item-content">
+          <h3>Paneer Tikka</h3>
+          <p class="price">₹100 / ₹150 / ₹200</p>
+          <label><input type="checkbox" name="menu" value="Paneer Tikka" data-price="100,150,200"> Select</label>
+          <label><input type="radio" name="Paneer Tikka" value="0" checked> Small</label>
+          <label><input type="radio" name="Paneer Tikka" value="1"> Medium</label>
+          <label><input type="radio" name="Paneer Tikka" value="2"> Large</label>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/733026bb-d22b-440c-a731-d79c78997e1a/1670524413602.jpeg" alt="Gobi Manchurian">
+        <div class="menu-item-content">
+          <h3>Gobi Manchurian</h3>
+          <p class="price">₹90 / ₹140 / ₹190</p>
+          <label><input type="checkbox" name="menu" value="Gobi Manchurian" data-price="90,140,190"> Select</label>
+          <label><input type="radio" name="Gobi Manchurian" value="0" checked> Small</label>
+          <label><input type="radio" name="Gobi Manchurian" value="1"> Medium</label>
+          <label><input type="radio" name="Gobi Manchurian" value="2"> Large</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Desserts</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="https://www.cookwithkushi.com/wp-content/uploads/2023/07/easy-juicy-gulab-jamun.jpg" alt="Gulab Jamun">
+        <div class="menu-item-content">
+          <h3>Gulab Jamun</h3>
+          <p class="price">₹60 / ₹100 / ₹150</p>
+          <label><input type="checkbox" name="menu" value="Gulab Jamun" data-price="60,100,150"> Select</label>
+          <label><input type="radio" name="Gulab Jamun" value="0" checked> Small</label>
+          <label><input type="radio" name="Gulab Jamun" value="1"> Medium</label>
+          <label><input type="radio" name="Gulab Jamun" value="2"> Large</label>
+        </div>
+      </div>
+      <div class="menu-item">
+        <img src="https://assets.cntraveller.in/photos/67fcd2e402c9cf2f7e817242/1:1/w_2433,h_2433,c_limit/Copy%20of%20DSC01268%20(1).jpg" alt="Ice Cream">
+        <div class="menu-item-content">
+          <h3>Ice Cream</h3>
+          <p class="price">₹50 / ₹80 / ₹120</p>
+          <label><input type="checkbox" name="menu" value="Ice Cream" data-price="50,80,120"> Select</label>
+          <label><input type="radio" name="Ice Cream" value="0" checked> Small</label>
+          <label><input type="radio" name="Ice Cream" value="1"> Medium</label>
+          <label><input type="radio" name="Ice Cream" value="2"> Large</label>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button class="order-btn" onclick="placeOrder()">Order Now</button>
+
+  <script>
+    function placeOrder() {
+      const items = document.querySelectorAll('input[name="menu"]:checked');
+      if (items.length === 0) {
+        alert("❌ Please select at least one item to order.");
+        return;
+      }
+
+      let orderSummary = "✅ Your order is successfully completed!\n\n";
+      let total = 0;
+
+      items.forEach(item => {
+        const itemName = item.value;
+        const prices = item.dataset.price.split(',').map(p => parseInt(p));
+        const selectedSizeIndex = document.querySelector(`input[name="${itemName}"]:checked`).value;
+        const selectedPrice = prices[selectedSizeIndex];
+        total += selectedPrice;
+        orderSummary += `🍽️ ${itemName} - ₹${selectedPrice}\n`;
+      });
+
+      orderSummary += `\nTotal Amount: ₹${total}\n\n🙏 Thank you for ordering with FoodFiesta!`;
+      alert(orderSummary);
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 FoodFiesta. Taste the Joy.</p>
+    </div>
+  </footer>
+</body>
+</html>
